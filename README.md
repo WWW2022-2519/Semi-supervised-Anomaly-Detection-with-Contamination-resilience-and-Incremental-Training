@@ -77,7 +77,9 @@ To show our weights are helpful for performance improvement, we compare our meth
     
     
     
-we supply the derivation process of our method to show that our method has no intersection with low base-rate fallacy.
+**Response to Reviewer 3 [Q1]: The theoretical analyses about why our method is not affected by low base-rate.**
+
+Thanks for your comment on this problem. We learn much from your comment and the recommended paper. In the following, we first explain why the **base-rate fallacy** considered in Axelsson’s TISSEC 2002 paper often occurs in **supervised and Bayes theory based methods**. We then discuss why our method is not affected by low base-rate. Finally, we supply the derivation process of our method to show that our method has no intersection with low base-rate fallacy.
 
 **(1) Base-rate fallacy**
 
@@ -106,8 +108,33 @@ In this case, the class conditional probability $P(y_2\mid x_2)$  (i.e., $50\%$)
 
 Due to the following two reasons, we think our method is not affected by low base-rate.
 
-* Due to the absence of prior probability, many methods choose to estimate the posterior probability $P(X \mid y)$, thus causing the low base-rate fallacy. The maximum likelihood rule chooses likelihood probability function maximization as the objective function. However, our method relies on the **least square method** to estimate $P(y \mid X)$, instead of the estimation of posterior probability $P(X \mid y)$. More specifically, our method takes the sum of the squares of the difference between the estimated value and the observed value as the loss function (please find the details at [1]). 
+* Due to the absence of prior probability, many methods choose to estimate the posterior probability $P(X \mid y)$, thus causing the low base-rate fallacy. The maximum likelihood rule chooses likelihood probability function maximization as the objective function. However, our method relies on the **least square method**  instead of the estimation of posterior probability $P(X \mid y)$. More specifically, our method takes the sum of the squares of the difference between the estimated value and the observed value as the loss function (please find the details at [1]). 
 * Our method is **semi-supervised** instead of supervised. In our model training, we do not use anomalous data at all. Note that in anomaly detection tasks, the base-rate is the ratio of anomalous data amount to all training data amount. Therefore, the low base-rate problem does not exist in our work. 
 
 Furthermore, it is worth noting that we use a ratio of $20\%$ in our experiments. We are sorry about the confusion. In fact, the ratio $20\%$ is not the base-rate. It is the proportion of anomalous data in our dataset KDD. To our knowledge, many related works use this dataset KDD and follow this setting. So we use this ratio in our model test. Moreover, our method is semi-supervised, and hence we do not use anomalous data in model training. As a result, this setting (i.e., $20\%$) does not affect the anomaly detection capability of our model (the anomaly detection capability heavily depends on model training instead of model test). 
+
+**(3) Derivation process of our method**
+
+The relationship between Maximum a posteriori estimation (MAP) and our method
+
+ A maximum posterior estimate is a point estimate of a quantity that is difficult to observe based on empirical data.
+$$
+\hat{{\theta}}=\arg \max _{{\theta}} P({\theta} \mid {x})=\arg \max _{{\theta}} \frac{P({x} \mid {\theta}) P({\theta})}{P({x})}=\arg \max _{{\theta}} P({x} \mid {\theta})P({\theta})
+$$
+We set  $e=Y-XW$, if the  $e \sim N(0,\sigma^2)$ and  $W\sim Lapace(0,b)$, the parameter $W$ can be estimated by the Maximum a posteriori estimation as follows:
+
+
+$$
+\hat{{W}}=\arg \max _{{W}} P({W} \mid {e})=\arg \max _{{W}} \frac{P({e} \mid {W}) P({W})}{P({e})}=\arg \max _{{W}} P({e} \mid {W})P({W})
+$$
+
+$$
+\begin{aligned}&\arg \max _{W} L(W)=\ln \prod_{i=1}^{n} \frac{1}{\sqrt{2 \pi} \sigma} \exp \left(-\frac{1}{2}\left(\frac{y_{i}-x_{i} W^{T}}{\sigma}\right)^{2}\right) \cdot \prod_{j=1}^{d} \frac{1}{2 b} \exp \left(-\frac{\left|W_{j}\right|}{\tau}\right) \\&\arg \min _{W} f(W)=\sum_{i=1}^{n}\left(y_{i}-x_{i} W^{T}\right)^{2}+\lambda \sum_{j=1}^{d}\left|W_{j}\right|=\left\|y-X W^{T}\right\|_{2}^{2}+\lambda\|W\|_{1}\end{aligned}
+$$
+
+So when the  $e \sim N(0,\sigma^2)$ and  $W\sim Lapace(0,b)$, The MAP estimation is equal to our method in the mathematical form, but there is no essential connection between the two, so there is no base-rate fallacy in our article.
+
+
+
+[1] Refenes A N , Bentz Y , Bunn D W , et al. Financial time series modelling with discounted least squares backpropagation[J]. Neurocomputing, 1997, 14(2):123-138.
 
