@@ -32,7 +32,8 @@ It can be seen in these settings, atypical normal data seem to be anomalies. In 
 
 
 
-**Experiments Result**
+
+ **Experiments Result**
 
 1. How does our method assign **weights** to normal data samples?
 
