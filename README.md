@@ -71,8 +71,9 @@ Thanks for your comment on this problem. We learn much from your comment and the
 The base-rate fallacy [1] is people’s tendency to ignore base rates in favor of, e.g., individuating information (when such is available), rather than integrate the two. 
 
 We first summarize the analyses presented in Axelsson’s TISSEC 2002 paper as follows. In this paper, the authors' analyses starts from the Bayes's theorem, i.e., 
-
-<img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201049937.png" width=330 />
+<div align=center>
+<img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201049937.png" width=330/>
+    </div>
 
 where *P(y)* represents prior probability, *P(X|y)* denotes posterior probability, *P(y|X)* is the class conditional probability, and *n* is the number of classes. For example, *n*  is set to *2* in anomaly detection tasks.
 
@@ -81,7 +82,9 @@ In the inference stage, training data are used to learn posterior probabilities 
 
 Now we apply the above analyses to **supervised** anomaly detection tasks. In these tasks, there are two classes, i.e.,  the normal class (its data is denoted by *x1*) and the anomalous class (its data is denoted by *x2*). We define their labels by *y1* and *y2*, respectively. In training set, the ratio of the anomalous data *x2* to total data *x1+x2* is *1\%*. **This setting corresponds to the low base-rate of *1\%* mentioned by Reviewer 3**. Furthermore, we assume the posterior probability *P(x2| y2)* is *99%*, following the Axelsson’s TISSEC 2002 paper. Then the class conditional probability * P(y2 |x2)* can be calculated as
 
+<div align=center>
 <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201615447.png" width =500 />
+    </div>
 
 In this case, the class conditional probability *P(y2|x2)*  (i.e., *50%*) and posterior probabilities *P(x2 | y2)* (i.e., *99%*) are heavily unequal to each other. **And this result tells us that the low base-rate indeed brings trouble in supervised anomaly detection methods.**  Hence, low base-rate is often emphasized in the studies of supervised anomaly detection. 
 
@@ -99,12 +102,14 @@ Furthermore, it is worth noting that we use a ratio of *20%* in our experiments.
 The relationship between Maximum a posteriori estimation (MAP) and our method
 
  A maximum posterior estimate is a point estimate of a quantity that is difficult to observe based on empirical data.
-
+<div align=center>
 <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201715777.png" width =600 />
+        </div>
 
 We set  *e=Y-XW*, if the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 align="middle" /> and  *W~Lapace(0,b)*, the parameter *W* can be estimated by the Maximum a posteriori estimation as follows:
-
+<div align=center>
 <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202011826.png" width =600 />
+        </div>
 
 So when the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 align="middle" /> and  *W~Lapace(0,b)*, The MAP estimation is equal to our method in the mathematical form, but there is no essential connection between the two, so there is no base-rate fallacy in our article.
 
