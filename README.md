@@ -19,9 +19,9 @@ We consider three experimental settings, as depicted by the subfigures of Fig. 1
 
 <figure>
     <div align="center"/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure1.png" width =350/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure2.png" width =350/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure3.png" width =350/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure1.png" width =330/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure2.png" width =330/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure3.png" width =330/>
 
 
 ​                                                                              **(a) setting1                   (b) setting2                 (c) setting3**                        
