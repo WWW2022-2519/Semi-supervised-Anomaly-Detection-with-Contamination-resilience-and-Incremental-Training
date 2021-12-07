@@ -1,7 +1,7 @@
 # Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training
 
 
-**Response to Reviewer 1 [Q1]:** Experimental analyses for the normal data that seems to be anomalies.
+**Response to Reviewer 1 [Q1]: Experimental analyses for the normal data that seems to be anomalies.**
 
 It is true there may exist some normal data that seem to be anomalies, although their amount is very small in practice. For convenience, these data are called **atypical normal data** in this response. When atypical normal data are used in model training, anomaly detection models often shift their decision boundary to accommodate them. And this often results in the degradation of detection performance. This is because typical normal data accounts for the vast majority of data, and scarifying the detection performance for them is more harm than good.
 
@@ -33,7 +33,7 @@ It can be seen in these settings, atypical normal data seem to be anomalies. In 
 
 
     
-**Experiments Result**
+**Experiments result and analyses**
 
 1. How does our method assign **weights** to normal data samples?
 
