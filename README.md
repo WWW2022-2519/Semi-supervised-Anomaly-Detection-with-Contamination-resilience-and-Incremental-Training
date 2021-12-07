@@ -29,8 +29,6 @@ It can be seen in these settings, atypical normal data seem to be anomalies. In 
    **Fig. 1 The distribution of normal and anomalies data.**
 </figure>
 
- 
-
 
     
 **Experiments result and analyses**
