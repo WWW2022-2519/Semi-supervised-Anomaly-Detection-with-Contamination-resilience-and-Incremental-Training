@@ -5,7 +5,7 @@
 
 It is true there may exist some normal data that seem to be anomalies, although their amount is very small in practice. For convenience, these data are called **atypical normal data** in this response. When atypical normal data are used in model training, anomaly detection models often shift their decision boundary to accommodate them. And this often results in the degradation of detection performance. This is because typical normal data accounts for the vast majority of data, and scarifying the detection performance for them is more harm than good.
 
-Owing to the introduction of the sample weights, our method can mitigate this problem. More specifically, the negative impacts of atypical normal data are weakened since they are assigned relatively small weights. To show how our method takes effect, we conduct experiments on a toy dataset with synthetic data.
+Owing to the introduction of the sample weights, our method can mitigate this problem. More specifically, the negative impacts of atypical normal data are ccced, since atypical normal data are assigned relatively small weights. To show how our method takes effect, we conduct experiments on a toy dataset with synthetic data.
 
 **Experimental setting**
 
@@ -28,7 +28,7 @@ It can be seen in these settings, atypical normal data seem to be anomalies. In 
 
 1. How does our method assign **weights** to normal data samples?
 
-We first discuss how our method deals with atypical normal data. Recall that our model training only uses normal data samples, each of which is assigned a weight. For visualization, Fig. 2 shows the heatmap of the weights assigned to these normal data samples. Note that our method introduces a **hyperplane** in weight assignment (please find the details in Eq. 9 in our manuscript). Therefore, the points (i.e., samples) close to that hyperplane are assigned large weights. That is, the points in the center are more likely to have weights. Contrarily, the points corresponding to atypical normal data are often assigned small weights. And this weaken their impacts on model performance, since our method takes these weights into account during model training.
+We first discuss how our method deals with atypical normal data. Recall that our model training only uses normal data samples, each of which is assigned a weight. For visualization, Fig. 2 shows the heatmap of the weights assigned to these normal data samples. Note that our method introduces a **hyperplane** in weight assignment (please find the details in Eq. (9) in our manuscript). Therefore, the points (i.e., samples) close to that hyperplane are assigned large weights. That is, the points in the center are more likely to have weights. Contrarily, the points corresponding to atypical normal data are often assigned small weights. And this weaken atypical normal data’s impacts on model performance, since our method takes these weights into account during model training.
 
 
 <figure>
@@ -90,10 +90,10 @@ In this case, the class conditional probability *P(y2|x2)*  (i.e., *50%*) and po
 
 Due to the following two reasons, we think our method is not affected by low base-rate.
 
-* Due to the absence of prior probability, many methods choose to estimate the posterior probability *P(X | y)*, thus causing the low base-rate fallacy. The maximum likelihood rule chooses likelihood probability function maximization as the objective function. However, our method relies on the **least square method**  instead of the estimation of posterior probability *P(X | y)*. More specifically, our method takes the sum of the squares of the difference between the estimated value and the observed value as the loss function (please find the details at [1]). 
+* Due to the absence of prior probability, weakens atypical normal data’s many methods choose to estimate the posterior probability *P(X | y)*, thus causing the low base-rate fallacy. The maximum likelihood rule chooses likelihood probability function maximization as the objective function. However, our method relies on the **least square method**  instead of the estimation of posterior probability *P(X | y)*. More specifically, our method takes the sum of the squares of the difference between the estimated value and the observed value as the loss function (please find the details at [1]). 
 * Our method is **semi-supervised** instead of supervised. In our model training, we do not use anomalous data at all. Note that in anomaly detection tasks, the base-rate is the ratio of anomalous data amount to all training data amount. Therefore, the low base-rate problem does not exist in our work. 
 
-Furthermore, it is worth noting that we use a ratio of *20%* in our experiments. We are sorry about the confusion. In fact, the ratio *20%* is not the base-rate. It is the proportion of anomalous data in our dataset KDD. To our knowledge, many related works use this dataset KDD and follow this setting. So we use this ratio in our model test. Moreover, our method is semi-supervised, and hence we do not use anomalous data in model training. As a result, this setting (i.e., *20%*) does not affect the anomaly detection capability of our model (the anomaly detection capability heavily depends on model training instead of model test). 
+Furthermore, it is worth noting that we use a ratio of *20%* in our experiments. We are sorry about the confusion. It is the proportion of anomalous data in our dataset KDD. To our knowledge, many related works use this dataset KDD and follow this setting. So we use this ratio in our model test. Moreover, our method is semi-supervised, and hence we do not use anomalous data in model training. As a result, this setting (i.e., *20%*) does not affect the anomaly detection capability of our model (the anomaly detection capability heavily depends on model training instead of model test). 
 
 
 [1] Refenes A N , Bentz Y , Bunn D W , et al. Financial time series modelling with discounted least squares backpropagation[J]. Neurocomputing, 1997, 14(2):123-138.
