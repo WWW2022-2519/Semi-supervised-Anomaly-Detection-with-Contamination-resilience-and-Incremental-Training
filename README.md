@@ -25,7 +25,7 @@ It can be seen in these settings, atypical normal data seem to be anomalies. In 
     <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure2.png" width =330/>
     (b) setting2  
     <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure3.png" width =330/>
-    (c) setting3
+   divstyle=float:none;clear:both;下文其他内容/div
 
 
    **(a) setting1          &ensp;          (b) setting2           &ensp;      (c) setting3**                        
