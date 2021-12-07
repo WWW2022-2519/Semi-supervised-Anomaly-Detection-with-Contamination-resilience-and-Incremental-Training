@@ -20,7 +20,7 @@ It can be seen in these settings, atypical normal data seem to be anomalies. In 
 
 <figure>
     <div align="center"/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/fig1.jpg" width=90%/>                  
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/fig1.jpg" width=100%/>                  
    **Fig. 1 The distribution of normal and anomalies data.**
 </figure>
     
@@ -55,12 +55,7 @@ To show our weights are helpful for performance improvement, we compare our meth
 
 <figure>
     <div align="center"/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure5.png" width =30%/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure6.png" width =30%/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure7.png" width =30%/>
-
-
-​  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **(a) setting1         &ensp; &ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;           (b) setting2       &ensp;  &ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;          (c) setting3**
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/fig2.jpg" width =100%/>
 
 ​                                                                **Fig. 3 Comparing different methods under various settings.**
  </figure>  
