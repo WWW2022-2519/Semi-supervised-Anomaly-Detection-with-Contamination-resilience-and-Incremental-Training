@@ -86,7 +86,7 @@ The base-rate fallacy [1] is people’s tendency to ignore base rates in favor o
 
 We first summarize the analyses presented in Axelsson’s TISSEC 2002 paper as follows. In this paper, the authors' analyses starts from the Bayes's theorem, i.e., 
 
-<img src="C:\Users\pc\AppData\Roaming\Typora\typora-user-images\image-20211207201049937.png" alt="image-20211207201049937" style="zoom:30%;" />
+<img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201049937.png" width=330 />
 
 where *P(y)* represents prior probability, *P(X|y)* denotes posterior probability, *P(y|X)* is the class conditional probability, and *n* is the number of classes. For example, *n*  is set to *2* in anomaly detection tasks.
 
@@ -95,7 +95,7 @@ In the inference stage, training data are used to learn posterior probabilities 
 
 Now we apply the above analyses to **supervised** anomaly detection tasks. In these tasks, there are two classes, i.e.,  the normal class (its data is denoted by *x1*) and the anomalous class (its data is denoted by *x2*). We define their labels by *y1* and *y2*, respectively. In training set, the ratio of the anomalous data *x2* to total data *x1+x2* is *1\%*. **This setting corresponds to the low base-rate of *1\%* mentioned by Reviewer 3**. Furthermore, we assume the posterior probability *P(x2| y2)* is *99%*, following the Axelsson’s TISSEC 2002 paper. Then the class conditional probability * P(y2 |x2)* can be calculated as
 
-<img src="C:\Users\pc\AppData\Roaming\Typora\typora-user-images\image-20211207201615447.png" alt="image-20211207201615447" style="zoom:45%;" />
+<img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201615447.png" width =500 />
 
 In this case, the class conditional probability *P(y2|x2)*  (i.e., *50%*) and posterior probabilities *P(x2 | y2)* (i.e., *99%*) are heavily unequal to each other. **And this result tells us that the low base-rate indeed brings trouble in supervised anomaly detection methods.**  Hence, low base-rate is often emphasized in the studies of supervised anomaly detection. 
 
@@ -114,13 +114,13 @@ The relationship between Maximum a posteriori estimation (MAP) and our method
 
  A maximum posterior estimate is a point estimate of a quantity that is difficult to observe based on empirical data.
 
-<img src="C:\Users\pc\AppData\Roaming\Typora\typora-user-images\image-20211207201838714.png" alt="image-20211207201838714" style="zoom:40%;" />
+<img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201715777.png" width =600 />
 
-We set  *e=Y-XW*, if the <img src="C:\Users\pc\AppData\Roaming\Typora\typora-user-images\image-20211207202545652.png" alt="image-20211207202545652" style="zoom:55%;" /> and  *W~Lapace(0,b)*, the parameter *W* can be estimated by the Maximum a posteriori estimation as follows:
+We set  *e=Y-XW*, if the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 /> and  *W~Lapace(0,b)*, the parameter *W* can be estimated by the Maximum a posteriori estimation as follows:
 
-<img src="C:\Users\pc\AppData\Roaming\Typora\typora-user-images\image-20211207202011826.png" alt="image-20211207202011826" style="zoom:45%;" />
+<img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202011826.png" width =600 />
 
-So when the <img src="C:\Users\pc\AppData\Roaming\Typora\typora-user-images\image-20211207202545652.png" alt="image-20211207202545652" style="zoom:55%;" /> and  *W~Lapace(0,b)*, The MAP estimation is equal to our method in the mathematical form, but there is no essential connection between the two, so there is no base-rate fallacy in our article.
+So when the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 /> and  *W~Lapace(0,b)*, The MAP estimation is equal to our method in the mathematical form, but there is no essential connection between the two, so there is no base-rate fallacy in our article.
 
 
 
