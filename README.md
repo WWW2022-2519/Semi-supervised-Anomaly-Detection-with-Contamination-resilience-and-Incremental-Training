@@ -30,9 +30,6 @@ It can be seen in these settings, atypical normal data seem to be anomalies. In 
 ​                                                                                 **Fig. 1 The distribution of normal and anomalies data.**
 
 
-
-
-
  **Experiments Result**
 
 1. How does our method assign **weights** to normal data samples?
@@ -50,7 +47,8 @@ We first discuss how our method deals with atypical normal data. Recall that our
 ​                                                                                                  **Fig. 2 The heatmap of the weight.**
 
 
-2. Are our weights **helpful** for detection performance improvement?
+
+ 2. Are our weights **helpful** for detection performance improvement?
 
 To show our weights are helpful for performance improvement, we compare our method (i.e., **SAE-CRIT**) with the SOTA method **GOAD** and the method that is obtained by removing weight assignment from SAE-CRIT, denoted by **SAE-CRIT-NW**. Our experiments are conducted under the experimental settings shown in Fig. 1. The results are presented in Fig. 3. We can draw two conclusions from Fig. 3. 
 
