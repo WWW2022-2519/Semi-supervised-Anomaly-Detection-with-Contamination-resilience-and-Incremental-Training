@@ -72,3 +72,42 @@ To show our weights are helpful for performance improvement, we compare our meth
 ​                                                                        **(a) setting1         &ensp; &ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;           (b) setting2       &ensp;  &ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;          (c) setting3**
 
 ​                                                                **Fig. 3 Comparing different methods under various settings.**
+    
+    
+    
+    
+    
+we supply the derivation process of our method to show that our method has no intersection with low base-rate fallacy.
+
+**(1) Base-rate fallacy**
+
+The base-rate fallacy [1] is people’s tendency to ignore base rates in favor of, e.g., individuating information (when such is available), rather than integrate the two. 
+
+We first summarize the analyses presented in Axelsson’s TISSEC 2002 paper as follows. In this paper, the authors' analyses starts from the Bayes's theorem, i.e., 
+
+$$
+P(y\mid X) =\frac{P(y) \cdot P(X \mid y)}{\sum_{i=1}^{n} P\left(y_{i}\right) \cdot P\left( X \mid y_{i} \right)}
+$$
+where $P(y)$ represents prior probability, $$P(X \mid y)$$ denotes posterior probability, $P(y\mid X)$ is the class conditional probability, and $n$ is the number of classes. For example, $n$ is set to $2$ in anomaly detection tasks.
+
+Accordingly, a **supervised** classification problem is divided into two stages: inference and decision.
+In the inference stage, training data are used to learn posterior probabilities $P(X \mid y)$. In the decision stage, these posterior probabilities are employed to estimate class conditional probability $P(y\mid X)$. In practice, $P(X \mid y)$ is often used to substitute $P(y\mid X)$. **Due to the low base-rate of data in a certain class, $P(X \mid y)$ calculated from training data is heavily unequal to the class conditional probability $P(y\mid X)$, hence resulting in poor classification performance**. And this problem is termed base-rate fallacy.
+
+Now we apply the above analyses to **supervised** anomaly detection tasks. In these tasks, there are two classes, i.e.,  the normal class (its data is denoted by $x_1$) and the anomalous class (its data is denoted by $x_2$). We define their labels by $y_1$ and $y_2$, respectively. In training set, the ratio of the anomalous data $x_2$ to total data $x_1+x_2$ is $1\%$. **This setting corresponds to the low base-rate of $1\%$ mentioned by Reviewer 3**. Furthermore, we assume the posterior probability $P(x_2 \mid y_2)$ is $99\%$, following the Axelsson’s TISSEC 2002 paper. Then the class conditional probability $ P(y_2 \mid x_2)$ can be calculated as
+
+$$
+\begin{aligned}
+  P(y_2\mid x_2) &=\frac{P(y_2) \cdot P(x_2 \mid y_2)}{\sum_{i=1}^{2} P\left(y_{i}\right) \cdot P\left(x_i\mid y_{i}\right)} \\&=\frac{1/100 \cdot 0.99}{1/100 \cdot 0.99 + (1-1/100) \cdot(1-0.99)} \\&= 50\%  .
+\end{aligned}
+$$
+In this case, the class conditional probability $P(y_2\mid x_2)$  (i.e., $50\%$) and posterior probabilities $P(x_2 \mid y_2)$ (i.e., $99\%$) are heavily unequal to each other. **And this result tells us that the low base-rate indeed brings trouble in supervised anomaly detection methods.**  Hence, low base-rate is often emphasized in the studies of supervised anomaly detection. 
+
+**(2) Our method is not affected by low base-rate. Why?**
+
+Due to the following two reasons, we think our method is not affected by low base-rate.
+
+* Due to the absence of prior probability, many methods choose to estimate the posterior probability $P(X \mid y)$, thus causing the low base-rate fallacy. The maximum likelihood rule chooses likelihood probability function maximization as the objective function. However, our method relies on the **least square method** to estimate $P(y \mid X)$, instead of the estimation of posterior probability $P(X \mid y)$. More specifically, our method takes the sum of the squares of the difference between the estimated value and the observed value as the loss function (please find the details at [1]). 
+* Our method is **semi-supervised** instead of supervised. In our model training, we do not use anomalous data at all. Note that in anomaly detection tasks, the base-rate is the ratio of anomalous data amount to all training data amount. Therefore, the low base-rate problem does not exist in our work. 
+
+Furthermore, it is worth noting that we use a ratio of $20\%$ in our experiments. We are sorry about the confusion. In fact, the ratio $20\%$ is not the base-rate. It is the proportion of anomalous data in our dataset KDD. To our knowledge, many related works use this dataset KDD and follow this setting. So we use this ratio in our model test. Moreover, our method is semi-supervised, and hence we do not use anomalous data in model training. As a result, this setting (i.e., $20\%$) does not affect the anomaly detection capability of our model (the anomaly detection capability heavily depends on model training instead of model test). 
+
