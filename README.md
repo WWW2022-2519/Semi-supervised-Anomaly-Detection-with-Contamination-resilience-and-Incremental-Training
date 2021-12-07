@@ -20,9 +20,9 @@ It can be seen in these settings, atypical normal data seem to be anomalies. In 
 
 <figure>
     <div align="center"/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure1.png" width =300/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure2.png" width =300/>    
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure3.png" width =300/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure1.png" width =150/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure2.png" width =150/>    
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure3.png" width =150/>
 
   
    **(a) setting1          &ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;         (b) setting2              &ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;     (c) setting3**                        
@@ -64,9 +64,9 @@ To show our weights are helpful for performance improvement, we compare our meth
 
 <figure>
     <div align="center"/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure5.png" width =300/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure6.png" width =300/>
-    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure7.png" width =300/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure5.png" width =150/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure6.png" width =150/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure7.png" width =150/>
 
 
 ​                                                                        **(a) setting1         &ensp; &ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;           (b) setting2       &ensp;  &ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;          (c) setting3**
@@ -116,11 +116,11 @@ The relationship between Maximum a posteriori estimation (MAP) and our method
 
 <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201715777.png" width =600 />
 
-We set  *e=Y-XW*, if the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 /> and  *W~Lapace(0,b)*, the parameter *W* can be estimated by the Maximum a posteriori estimation as follows:
+We set  *e=Y-XW*, if the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 align="middle" /> and  *W~Lapace(0,b)*, the parameter *W* can be estimated by the Maximum a posteriori estimation as follows:
 
 <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202011826.png" width =600 />
 
-So when the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 /> and  *W~Lapace(0,b)*, The MAP estimation is equal to our method in the mathematical form, but there is no essential connection between the two, so there is no base-rate fallacy in our article.
+So when the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 align="middle" /> and  *W~Lapace(0,b)*, The MAP estimation is equal to our method in the mathematical form, but there is no essential connection between the two, so there is no base-rate fallacy in our article.
 
 
 
