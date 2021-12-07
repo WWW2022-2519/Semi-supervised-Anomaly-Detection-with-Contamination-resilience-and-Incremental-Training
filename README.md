@@ -44,11 +44,11 @@ We first discuss how our method deals with atypical normal data. Recall that our
     <div align="center"/>
     <img 
    src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure4.png" width =330/ >
-</figure>
+
 
 
 ​                                                                                                  **Fig. 2 The heatmap of the weight.**
-
+</figure>
 
 
  
