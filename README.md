@@ -20,8 +20,8 @@ We consider three experimental settings, as depicted by the subfigures of Fig. 1
 <figure>
     <div align="center"/>
     <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure1.png" width =350/>
-    <img src="file:///C:/Users/pc/AppData/Local/Temp/lu224401qxmru.tmp/lu224401qxmss_tmp_a88e983ae8cfcd1f.png" width =350/>
-    <img src="file:///C:/Users/pc/AppData/Local/Temp/lu224401qxmru.tmp/lu224401qxmss_tmp_7e7cd2688ef20dfb.png" width =350/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure2.png" width =350/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure3.png" width =350/>
 
 
 ​                                                                              **(a) setting1                   (b) setting2                 (c) setting3**                        
@@ -39,7 +39,7 @@ We first discuss how our method deals with the atypical normal data. Recall that
 <figure>
     <div align="center"/>
     <img 
-   src="file:///C:/Users/pc/AppData/Local/Temp/lu224401qxmru.tmp/lu224401qxmsg_tmp_182c2347e7aa4363.png" width =330/ >
+   src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure4.png" width =330/ >
 </figure>
 
 
@@ -53,9 +53,9 @@ To show our weight assignment method is helpful for performance improvement, we 
 
 <figure>
     <div align="center"/>
-    <img src="file:///C:/Users/pc/AppData/Local/Temp/lu224401qxmru.tmp/lu224401qxmso_tmp_a5920e286e6a90b7.png" width =330/>
-    <img src="file:///C:/Users/pc/AppData/Local/Temp/lu224401qxmru.tmp/lu224401qxmso_tmp_7eff18c68618e996.png" width =330/>
-    <img src="file:///C:/Users/pc/AppData/Local/Temp/lu224401qxmru.tmp/lu224401qxmso_tmp_f6a2cd9b2835db11.png" width =330/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure5.png" width =330/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure6.png" width =330/>
+    <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/figure7" width =330/>
 
 
 ​                                                                        **(a) setting1                   (b) setting2                 (c) setting3**
