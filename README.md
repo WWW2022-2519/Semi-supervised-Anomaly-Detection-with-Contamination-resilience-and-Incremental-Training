@@ -68,8 +68,6 @@ Thanks for your comment on this problem. We learn much from your comment and the
 
 **(1) Base-rate fallacy**
 
-The base-rate fallacy [1] is people’s tendency to ignore base rates in favor of, e.g., individuating information (when such is available), rather than integrate the two. 
-
 We first summarize the analyses presented in Axelsson’s TISSEC 2002 paper as follows. In this paper, the authors' analyses starts from the Bayes's theorem, i.e., 
 <div align=center>
 <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201049937.png" width=330/>
@@ -96,23 +94,6 @@ Due to the following two reasons, we think our method is not affected by low bas
 * Our method is **semi-supervised** instead of supervised. In our model training, we do not use anomalous data at all. Note that in anomaly detection tasks, the base-rate is the ratio of anomalous data amount to all training data amount. Therefore, the low base-rate problem does not exist in our work. 
 
 Furthermore, it is worth noting that we use a ratio of *20%* in our experiments. We are sorry about the confusion. In fact, the ratio *20%* is not the base-rate. It is the proportion of anomalous data in our dataset KDD. To our knowledge, many related works use this dataset KDD and follow this setting. So we use this ratio in our model test. Moreover, our method is semi-supervised, and hence we do not use anomalous data in model training. As a result, this setting (i.e., *20%*) does not affect the anomaly detection capability of our model (the anomaly detection capability heavily depends on model training instead of model test). 
-
-**(3) Derivation process of our method**
-
-The relationship between Maximum a posteriori estimation (MAP) and our method
-
- A maximum posterior estimate is a point estimate of a quantity that is difficult to observe based on empirical data.
-<div align=center>
-<img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207201715777.png" width =600 />
-        </div>
-
-We set  *e=Y-XW*, if the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 align="middle" /> and  *W~Lapace(0,b)*, the parameter *W* can be estimated by the Maximum a posteriori estimation as follows:
-<div align=center>
-<img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202011826.png" width =600 />
-        </div>
-
-So when the <img src="https://github.com/WWW2022-2519/Semi-supervised-Anomaly-Detection-with-Contamination-resilience-and-Incremental-Training/blob/main/image-20211207202545652.png" alt="image-20211207202545652" width =100 align="middle" /> and  *W~Lapace(0,b)*, The MAP estimation is equal to our method in the mathematical form, but there is no essential connection between the two, so there is no base-rate fallacy in our article.
-
 
 
 [1] Refenes A N , Bentz Y , Bunn D W , et al. Financial time series modelling with discounted least squares backpropagation[J]. Neurocomputing, 1997, 14(2):123-138.
